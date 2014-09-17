@@ -1,0 +1,48 @@
+
+PLAY [test raw module] ******************************************************** 
+
+GATHERING FACTS *************************************************************** 
+ok: [10.167.134.42]
+
+TASK: [run ipconfig] ********************************************************** 
+ok: [10.167.134.42]
+
+TASK: [debug var=ipconfig] **************************************************** 
+ok: [10.167.134.42] => {
+    "ipconfig": {
+        "invocation": {
+            "module_args": "ipconfig", 
+            "module_name": "raw"
+        }, 
+        "rc": 0, 
+        "stderr": "", 
+        "stdout": "\r\nWindows IP Configuration\r\n\r\n\r\nEthernet adapter Local Area Connection 2:\r\n\r\n   Connection-specific DNS Suffix  . : XXXX.XXXX.XXXX.XXXX\r\n   Link-local IPv6 Address . . . . . : fe80::68d0:31cd:513a:39a%13\r\n   IPv4 Address. . . . . . . . . . . : 10.167.134.42\r\n   Subnet Mask . . . . . . . . . . . : 255.255.255.0\r\n   Default Gateway . . . . . . . . . : 10.167.134.1\r\n\r\nTunnel adapter Teredo Tunneling Pseudo-Interface:\r\n\r\n   Media State . . . . . . . . . . . : Media disconnected\r\n   Connection-specific DNS Suffix  . : \r\n\r\nTunnel adapter isatap.XXXX.XXXX.XXXX.XXXX:\r\n\r\n   Media State . . . . . . . . . . . : Media disconnected\r\n   Connection-specific DNS Suffix  . : XXXX.XXXX.XXXX.XXXX\r\n", 
+        "stdout_lines": [
+            "", 
+            "Windows IP Configuration", 
+            "", 
+            "", 
+            "Ethernet adapter Local Area Connection 2:", 
+            "", 
+            "   Connection-specific DNS Suffix  . : XXXX.XXXX.XXXX.XXXX", 
+            "   Link-local IPv6 Address . . . . . : fe80::68d0:31cd:513a:39a%13", 
+            "   IPv4 Address. . . . . . . . . . . : 10.167.134.42", 
+            "   Subnet Mask . . . . . . . . . . . : 255.255.255.0", 
+            "   Default Gateway . . . . . . . . . : 10.167.134.1", 
+            "", 
+            "Tunnel adapter Teredo Tunneling Pseudo-Interface:", 
+            "", 
+            "   Media State . . . . . . . . . . . : Media disconnected", 
+            "   Connection-specific DNS Suffix  . : ", 
+            "", 
+            "Tunnel adapter isatap.XXXX.XXXX.XXXX.XXXX:", 
+            "", 
+            "   Media State . . . . . . . . . . . : Media disconnected", 
+            "   Connection-specific DNS Suffix  . : XXXX.XXXX.XXXX.XXXX"
+        ]
+    }
+}
+
+PLAY RECAP ******************************************************************** 
+10.167.134.42              : ok=3    changed=0    unreachable=0    failed=0   
+
