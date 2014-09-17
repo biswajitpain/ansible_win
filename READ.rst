@@ -1,5 +1,0 @@
-Ansible Windows
-==============
-
-Intoduction
-----------
