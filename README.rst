@@ -26,8 +26,7 @@ There are some helping library  .ps1  available but you need to understand  that
     
     Add an exception in firewall.
     
-    ``netsh advfirewall firewall add rule Profile=Domain name="Allow WinRM HTTPS" dir=in localport=5986 
-     protocol=TCPaction=allow``
+    ``netsh advfirewall firewall add rule Profile=Domain name="Allow WinRM HTTPS" dir=in localport=5986 protocol=TCPaction=allow``
      
      Profile=Domain   for domain level
      Profile=Any      for all.
