@@ -19,14 +19,16 @@ There are some helping library  .ps1  available but you need to understand  that
     controller (Linux) Node.
     
     Change the execution policy to remote signed .First check by applying 
+    
     ``Get-ExecutionPolicy -Scope CurrentUser``
-    if result is 
-    # Undefined
-    Then  ``Set-ExecutionPolicy -Scope CurrentUser RemoteSigned``
+    
+     if result is Undefined Then  
+    
+    ``Set-ExecutionPolicy -Scope CurrentUser RemoteSigned``
     
     Add an exception in firewall.
     
     ``netsh advfirewall firewall add rule Profile=Domain name="Allow WinRM HTTPS" dir=in localport=5986 protocol=TCPaction=allow``
-     
-     Profile=Domain   for domain level
-     Profile=Any      for all.
+ 
+    Profile=Domain   for domain level
+    Profile=Any      for all.
