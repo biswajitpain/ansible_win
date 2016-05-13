@@ -12,21 +12,20 @@ Configuring winrm and psremoting:
 
 Powershell comes in built with windows but not activated. Add powershell from features (in case of Server 2008 R2,2012).If the powershell version is not 3.0 update it to 3.0.
     
-    ``Enable-PSRemoting -f``
+```Enable-PSRemoting -f```
     
 You need a local administartor user (in domain environment) to connect windows node from controller (Linux) Node.
-    
 Change the execution policy to remote signed .First check by applying 
+
+```Get-ExecutionPolicy -Scope CurrentUser```
     
-    ``Get-ExecutionPolicy -Scope CurrentUser``
+if result is Undefined Then  
+
+```Set-ExecutionPolicy -Scope CurrentUser RemoteSigned```
     
- if result is Undefined Then  
+Add an exception in firewall.
     
-    ``Set-ExecutionPolicy -Scope CurrentUser RemoteSigned``
-    
-    Add an exception in firewall.
-    
-    ``netsh advfirewall firewall add rule Profile=Domain name="Allow WinRM HTTPS" dir=in localport=5986 protocol=TCPaction=allow``
+```netsh advfirewall firewall add rule Profile=Domain name="Allow WinRM HTTPS" dir=in localport=5986 protocol=TCPaction=allow```
  
-    Profile=Domain   for domain level
-    Profile=Any      for all.
+Profile=Domain   for domain level
+Profile=Any      for all.
