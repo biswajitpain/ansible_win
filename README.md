@@ -1,6 +1,6 @@
-Ansible Windows
+Ansible In Windows
 ===============
-Ansible For Windows
+Setup Ansible For Windows
 --------------------
 Ansible is a very powerful configuration tools in Unix/Linux.It is also works in windows envionment 
 using Microsoft's Powershell 3.0.
